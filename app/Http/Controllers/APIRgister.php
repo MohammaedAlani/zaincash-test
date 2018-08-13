@@ -23,7 +23,7 @@ class APIRgister extends Controller
         
         if($validator -> fails()) {
            
-            return response()->json($validator->errors());
+            return response()->json(['status' => false,$validator->errors()]);
             
         }
         else{
